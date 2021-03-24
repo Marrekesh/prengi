@@ -27,19 +27,23 @@
         min-height: 700px;
         background: url("../img/background_1.png") center (center/cover) no-repeat;
         padding: 131px 0 0 0;
+        // background-size: cover;
     }
     &__carousel-wrapper {
         max-width: 1140px;
         margin: 0 auto;
         overflow: hidden;
     }
-    &__carousel {
-        position: relative;
-        z-index: 9999;
-
-    }
+    // &__carousel {
+    //     position: relative;
+    //     margin: 0 auto;
+    //     width: 1140px;
+    // }
     // &__carousel-block {
-    //     align-items: center;
+    //     margin-right: 183px;
+    // }
+    // &__carousel-slide {
+    //     display: table;
     // }
     &__title {
         font-size: 42px;
@@ -60,10 +64,55 @@
     }
     .slick-slide {
         display: flex;
-        min-height: 569px;
-        width: 1140px;
         align-items: center;
         justify-content: space-between;
-        // z-index: 11;
+        height: 569px;
+    }
+    .slick-prev {
+        position: absolute;
+        left: 517px;
+        z-index: 10;
+        bottom: 68px;
+        transform: translateX(-50%);
+        img {
+            width: 6px;
+            height: 10px;
+        }
+        
+    }
+    .slick-next {
+        position: absolute;
+        bottom: 68px;
+        right: 518px;
+        transform: translateX(-50%);
+        img {
+            width: 6px;
+            height: 10px;
+        }
+    }
+    .slick-arrow {
+        background: rgba(255,255,255, 0.0);
+        border: none;
+    }
+    .slick-dots {
+        display: flex;
+        font-size: 0;
+        position: absolute;
+        bottom: 57px;
+        left: 551px;
+        transform: translateX(-50%);
+        button {
+            width: 11px;
+            height: 11px;
+            background-color: rgba(255,255,255, 0.0);
+            border: 1px solid #fff;
+            margin-right: 3px;
+            border-radius: 100%;
+        }
+        .slick-active {
+            button {
+               background-color: rgba(255,255,255, 1); 
+            } 
+        }
     }
 }
