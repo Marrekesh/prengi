@@ -35,7 +35,11 @@
         overflow: hidden;
     }
     &__carousel-slide {
+        position: relative;
         width: 1140px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         border: none;
     }
     &__title {
@@ -62,6 +66,10 @@
         height: 569px;
         &:focus {
             outline: none;
+        }
+        img {
+            display: block;
+            max-width: 100%;
         }
     }
     .slick-next {
