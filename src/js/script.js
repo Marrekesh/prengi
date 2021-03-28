@@ -29,7 +29,7 @@ $(document).ready(function (){
         $(this)
           .addClass('solutions__tab_active').siblings().removeClass('solutions__tab_active')
           .closest('div.container').find('div.solutions__tab-content').removeClass('solutions__tab-content_active').eq($(this).index()).addClass('solutions__tab-content_active');
-        //   $('.solutions__carousel').slick("reinit");
+          $('.solutions__carousel').slick("reinit");
       });
 
 })

@@ -10,4 +10,14 @@
     box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.07);
     border: none;
     border-radius: 5px;
+    &_center {
+        display: block;
+        margin: 0 auto;
+    }
+    &:hover {
+        box-shadow: 3px 3px 20px $main-color;
+    }
+    &:focus {
+        border: blue;
+    }
 }

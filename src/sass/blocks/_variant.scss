@@ -1,6 +1,6 @@
 .variant {
     min-height: 580px;
-    background: url("../../img/bg3.png") center (center/cover) no-repeat;
+    background: url("../img/bg3.png") center (center/cover) no-repeat;
     padding: 80px 0 181px 0;
     &__subtitle {
         display: block;
@@ -15,38 +15,64 @@
     }
     &__wrapper {
         display: flex;
-        // justify-content: center;
+        justify-content: space-between;
         // align-items: center;
     }
-    &__left {
+    &__sect {
         position: relative;
         min-height: 169px;
-        padding:38px 39px 38px 0;
-        flex: 0 0 calc(50% - 15px);
-       
+        flex: 0 0 46%;
+        z-index: 10;
+        &_left {
+           padding:38px 39px 38px 0;
+        }
+        &_right {
+            padding:38px 0 38px 39px; 
+        }
+
     }
-    &__left-subtitle {
+    &__header {
+        position: relative;
         font-size: 30px;
-        line-height: 22px;
+        line-height: 26px;
         font-weight: 900;
         text-transform: uppercase;
         color: #ffffff;
         margin-bottom: 20px;
-        text-align: end;
+        z-index: 11;
+        &_left {
+           text-align: end; 
+        }
+        &_right {
+            text-align: start; 
+        }
     }
-    &__left-description {
+    &__description {
+        position: relative;
         font-size: 18px;
         line-height: 26px;
         font-weight: 300;
         color: #ffffff;
-        text-align: end;
+        z-index: 11;
+        &_left {
+            text-align: end;
+        }
+        &_right {
+            text-align: start;
+        }
     }
-    &__left-block {
+    &__block {
         position: absolute;
         width: 167px;
-        height: 167px;
+        height: 100%;
         background-color: rgba($main-color, 0.3);
-        right: 0;
         top: 0;
-    }
+        z-index: 1;
+        &_left {
+           right: 0; 
+        }
+        &_right {
+            left: 0;
+        }
+    }    
 }
