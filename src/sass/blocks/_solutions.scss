@@ -1,6 +1,6 @@
 .solutions {
     min-height: 889px;
-    background: url("../../img/bg2.png") center (center/cover) no-repeat;
+    background: url("../img/bg2.png") center (center/cover) no-repeat;
     padding: 79px 0 61px 0;
     &__subtitle {
         margin: 0 auto;
@@ -67,6 +67,11 @@
         .slick-next {
             right: -30px;
             left: auto;
+        }
+        .slick-slide {
+            &:focus {
+                outline: none;
+            }
         }
 
     }
