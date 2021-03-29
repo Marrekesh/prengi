@@ -7,6 +7,15 @@ $(document).ready(function (){
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.png"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="icons/right.png"></button>',
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                arrows: false,
+              }
+            }
+        ]
+
     });
 
     //Solution carousel
@@ -20,6 +29,7 @@ $(document).ready(function (){
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow_prev.png"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow_next.png"></button>',
+
     });
 
     //Tabs
@@ -29,7 +39,7 @@ $(document).ready(function (){
         $(this)
           .addClass('solutions__tab_active').siblings().removeClass('solutions__tab_active')
           .closest('div.container').find('div.solutions__tab-content').removeClass('solutions__tab-content_active').eq($(this).index()).addClass('solutions__tab-content_active');
-          $('.solutions__carousel').slick("reinit");
+          $('.solutions__carousel').slick("refresh");
       });
 
 })

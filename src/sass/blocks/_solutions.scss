@@ -1,5 +1,4 @@
 .solutions {
-    min-height: 889px;
     background: url("../img/bg2.png") center (center/cover) no-repeat;
     padding: 79px 0 61px 0;
     &__subtitle {
@@ -84,9 +83,12 @@
         }
     }
     &__tab-content {
-        display: none;
+        display: block !important;
+        height: 0;
+        overflow: hidden;
         &_active {
             display: block;
+            height: auto;
         }
     }
 }
