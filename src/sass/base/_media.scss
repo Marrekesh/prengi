@@ -127,7 +127,7 @@
             background-color: rgba($main-color, 0.8);
             z-index: 12;
             width: 50%;
-            height: 100%;
+            height: auto;
             // transform: translateX(100%);
 
             transition: 0.5s all;
@@ -150,6 +150,10 @@
                     margin-bottom: 20px;
                 }
             }
+        }
+        &__link {
+            font-size: 16px;
+            line-height: 40px;
         }   
         &__logo {
             width: 100px;
@@ -176,5 +180,41 @@
             }
         }
 
+    }
+    .promo {
+        &__countries {
+            padding-bottom: 0;
+        }
+        &__wrapper {
+            margin-bottom: 15px;
+        }
+        &__text {
+            display: none;
+            transition: 0.5s all;
+            &_active {
+                transition: 0.5s all;
+                display: block;
+                height: auto;
+            }
+        }
+
+        &__more {
+            display: block;
+            text-align: center;
+        }
+        &__trei {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 25px;
+            transition: 0.5s all;
+            transform: rotate(0deg);
+            &_active {
+                transform: rotate(180deg);
+                .header {
+                    top: 217px;
+                }
+            }
+        }
     }
 }

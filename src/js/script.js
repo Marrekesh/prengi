@@ -60,5 +60,15 @@ $(document).ready(function (){
       
     });
     
+    //more information about countries
+
+    $('.promo__trei').on('click', function(e) {
+      e.preventDefault();
+      $('.promo__trei').toggleClass('promo__trei_active');
+      $('.promo__text').toggleClass('promo__text_active');
+      
+    });
+
+
 
 })
