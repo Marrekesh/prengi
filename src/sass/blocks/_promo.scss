@@ -70,6 +70,9 @@
             font-weight: 400;
         }
     }
+    &__trei {
+        display: none;
+    }
     .slick-slide {
         &:focus {
             outline: none;
