@@ -30,7 +30,7 @@
 @media(max-width:992px) {
     .header {
         overflow: hidden;
-        top: 155px;
+        top: 170px;
         &__menu-item {
             margin-left: 40px;
         }
@@ -117,23 +117,20 @@
 }
 @media(max-width:768px) {
     .header {
-        top: 170px;
+        top: 100px;
         &__toggle {
             position: fixed;
             align-items: center;
             padding-top: 20px ;
-            top: 220px;
-            right: -100%;
-            background-color: rgba($main-color, 0.8);
+            top: 0;
+            left: -100%;
+            background-color: rgba($main-color, 0.9);
             z-index: 12;
             width: 50%;
-            height: auto;
-            // transform: translateX(100%);
-
+            height: 100%;
             transition: 0.5s all;
             &_active {
-                // transform: translateX(0);
-                right: 0;
+                left: 0;
             }
 
         }
@@ -141,9 +138,11 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            height: 50%;
+            height: 100%;
             padding: 10px 10px;
+            justify-content: flex-start;
             &-item {
+                width: 100%;
                 margin-left: 0;
                 margin-bottom: 20px;
                 &:first-child {
@@ -152,9 +151,15 @@
             }
         }
         &__link {
+            display: block;
+            width: 100%;
+            text-align: center;
+            line-height: 61px;
             font-size: 16px;
-            line-height: 40px;
-        }   
+            &:hover {
+                color: $sub-color;
+            }
+        } 
         &__logo {
             width: 100px;
         }
@@ -162,7 +167,6 @@
             right: 0;
             display: block;
             z-index: 12;
-            cursor: pointer;
             span {
                 display: block;
                 width: 40px;
@@ -172,7 +176,7 @@
             }
             &_active {
                 position: fixed;
-                top: 190px;
+                // top: 100px;
                 right: 14px;
                 span {
                     box-shadow: 0 0 15px $main-color;
@@ -190,31 +194,181 @@
         }
         &__text {
             display: none;
-            transition: 0.5s all;
-            &_active {
-                transition: 0.5s all;
-                display: block;
-                height: auto;
-            }
         }
-
-        &__more {
-            display: block;
-            text-align: center;
+        &__title {
+            font-size: 26px;
+            line-height: 33px;
         }
-        &__trei {
-            display: block;
-            margin: 0 auto;
-            text-align: center;
+        &__description {
+            font-size: 17px;
+        }
+        &__carousel-img {
+            width: 250px;
+        }
+        &__carousel {
+           .slick-dots {
+                left: 46.5%;
+            } 
+        }
+    }
+    .questions {
+        &__subtitles {
             font-size: 25px;
-            transition: 0.5s all;
-            transform: rotate(0deg);
-            &_active {
-                transform: rotate(180deg);
-                .header {
-                    top: 217px;
-                }
+        }
+    }
+    .solutions {
+        &__subtitle {
+            font-size: 25px;
+        }
+        &__wrapper {
+            max-width: 576px;
+        }
+        &__tab {
+            padding: 7px;
+            font-size: 13px;
+        }
+    }
+    .advantages {
+        &__subtitle {
+            font-size: 25px;
+        }
+    }
+    .variant {
+        padding: 80px 0 80px 0;
+        &__subtitle {
+            font-size: 25px;
+        }
+        &__header {
+            font-size: 24px;
+        }
+        &__description {
+            font-size: 17px;
+        }
+    }
+    .start {
+        &__subtitle {
+            font-size: 25px;
+        }
+    }
+    .footer {
+        &__wrapper {
+            display: none;
+        }
+        &__alternative-wrapper {
+            display: block;
+        }
+        &__alternative-links {
+            display: flex;
+            justify-content: center;
+        }
+        &__alternative-link {
+            font-size: 14px;
+            font-weight: 300;
+            color: #ffffff;
+            text-decoration: none;
+            color: #fff;
+        }
+        &__subtitle {
+            margin-right: 20px;
+            margin-bottom: 0;
+            &:last-child {
+                margin-right: 0;
             }
+        }
+        &__text {
+            margin-bottom: 15px;
+        }
+    }
+
+}
+@media(max-width:620px) {
+    .promo {
+        &__carousel-img {
+            display: none;
+        }
+        &__carousel-block {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    .solutions {
+        &__wrapper {
+            max-width: 492px;
+        }
+        &__tab {
+            font-size: 11px;
+        }
+        .slick-dots {
+            bottom: -29%;
+        }
+    }
+    .advantages {
+        &__block {
+            padding: 39px 55px 43px 55px;
+        }
+    }
+    .variant {
+        &__sect {
+            flex: 0 0 50%;
+        }
+        &__sect_left {
+            padding: 38px 0 38px 0;
+        }
+        &__sect_right {
+            padding: 38px 0 38px 0;
+        }
+    }
+}
+@media(max-width:428px) {
+    .header {
+        top: 85px;
+    }
+    .promo {
+        &__country {
+            display: none;
+        }
+    }
+    .questions {
+        &__subtitles {
+            font-size: 20px;
+        }
+    }
+    .solutions {
+        &__subtitle {
+            font-size: 20px;
+        }
+        &__tab {
+            font-size: 8px;
+        }
+        .slick-dots {
+            bottom: -40%;
+        }
+    }
+    .advantages {
+        &__subtitle {
+            font-size: 20px;
+        }
+        &__descriptions {
+            font-size: 18px;
+        }
+    }
+    .variant {
+        &__subtitle {
+            font-size: 20px;
+        }
+        &__header {
+            font-size: 20px;
+        }
+        &__description {
+            font-size: 15px;
+        }
+        &__block {
+            width: 160px;
+        }
+    }
+    .start {
+        &__subtitle {
+            font-size: 20px;
         }
     }
 }

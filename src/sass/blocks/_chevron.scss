@@ -1,0 +1,15 @@
+.chevron {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    cursor: pointer;
+    img {
+        width: 100%;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}

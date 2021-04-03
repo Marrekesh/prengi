@@ -69,6 +69,23 @@ $(document).ready(function (){
       
     });
 
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 900) {
+        $('.chevron').fadeIn();
+      } else {
+        $('.chevron').fadeOut();
+      }
+    });
+
+    //overlay
+
+    $('.button__data').on("click", function () {
+      $('.overlay, .modal-data').fadeIn('slow');
+    })
+
+    $('.modal__close').on("click", function () {
+      $('.overlay, .modal-data').fadeOut('slow');
+    })
 
 
 })

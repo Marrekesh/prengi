@@ -49,7 +49,7 @@
     </header>
 
     <main>
-        <section class="promo">
+        <section class="promo" id="up">
             <div class="promo__countries">
                 <div class="container">
                     <div class="promo__wrapper">
@@ -114,7 +114,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="promo__trei"> &#9660;</div>
                 </div>
             </div>
             <div class="promo__main">
@@ -127,7 +126,7 @@
                                     <div class="promo__description"><span>PRENGI</span> - Платформа для прозрачного
                                         <br>управления бизнесом
                                     </div>
-                                    <button class="button">Получить доступ</button>
+                                    <button class="button button__data">Получить доступ</button>
                                 </div>
                                 <div class="promo__carousel-img">
                                     <img src="img/mobile_slide.png" alt="mobile">
@@ -499,7 +498,7 @@
                     </div>
                 </div>
                 <div class="start__subtitle">Приступить очень просто! <br>Нужно получить доступ и начать работу!</div>
-                <button class="button button_center">связаться с нами</button>
+                <button class="button button__data button_center">связаться с нами</button>
                 
             </div>
         </section>
@@ -556,10 +555,48 @@
                     </ul>
                 </div>
             </div>
+            <div class="footer__alternative-wrapper">
+                <div class="footer__logo">
+                    <img src="icons/footer_logo.png" alt="V&A">
+                </div>
+                <div class="footer__text">
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                    Управление задачами
+                </div>
+                <div class="footer__alternative-links">
+                    <div class="footer__subtitle">
+                        <a href="#" class="footer__alternative-link">Модули</a>
+                    </div> 
+                    <div class="footer__subtitle">
+                        <a href="#" class="footer__alternative-link">Отрасли</a>
+                    </div>
+                    <div class="footer__subtitle">
+                        <a href="#" class="footer__alternative-link">О нас</a>
+                    </div>
+                </div>
+            </div>
             <hr class="footer__line">
             <div class="footer__copyright">© Prengi Ink. 2008-2017 Все права защищены.</div>
         </div>
     </footer>
+
+    <div class="chevron">
+        <a href="#up"><img src="icons/chevron-circle-up-solid.svg" alt="chevron"></a>
+    </div>
+
+    <div class="overlay">
+        <div class="modal modal-data">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Напишите нам!</div>
+            <form class="modal__form">
+                <input name="name" required placeholder="Введите ваше имя..." type="text">
+                <input name="phone" required placeholder="Введите ваш телефон..." type="text">
+                <input name="email"  required placeholder="Введите ваш Email..." type="email">
+                <button class="button button_center button__data">Отправить</button>
+            </form>
+        </div>
+        
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
